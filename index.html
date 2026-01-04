@@ -1,9 +1,47 @@
-<hr>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Byte & Brew</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-<h2>Find Me Online</h2>
-<a href="https://github.com/" target="_blank">Visit my GitHub</a>
+  <!-- Header -->
+  <header class="navbar">
+    <h1>Byte & Brew</h1>
+    <nav>
+      <button data-filter="all" class="active">All</button>
+      <button data-filter="coffee">Coffee</button>
+      <button data-filter="dessert">Desserts</button>
+    </nav>
+  </header>
 
-<hr>
+  <!-- Main -->
+  <main class="container">
 
-<h2>Sample Image</h2>
-<img src="https://via.placeholder.com/300" alt="Placeholder image">
+    <!-- Menu -->
+    <section class="menu">
+      <h2>Menu</h2>
+      <div id="menuItems" class="menu-grid"></div>
+    </section>
+
+    <!-- Cart -->
+    <aside class="cart">
+      <h2>Your Order</h2>
+      <ul id="cartItems"></ul>
+      <p class="total">Total: ₹<span id="totalPrice">0</span></p>
+      <button class="checkout">Checkout</button>
+    </aside>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Byte & Brew</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
