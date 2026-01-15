@@ -16,3 +16,10 @@ document.querySelectorAll(".point").forEach(point => {
 
 
 reveals.forEach(r => observer.observe(r));
+
+document.querySelectorAll(".science-card").forEach(card => {
+  card.addEventListener("click", () => {
+    card.classList.toggle("active");
+  });
+});
+
