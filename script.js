@@ -10,12 +10,6 @@ const observer = new IntersectionObserver(entries => {
 
 reveals.forEach(r => observer.observe(r));
 
-document.querySelectorAll(".point").forEach(point => {
-  point.addEventListener("click", () => {
-    alert(`${point.innerText} occupies a different position in force, clarity, and contact time.`);
-  });
-});
-
 document.querySelectorAll(".science-card").forEach(card => {
   card.addEventListener("click", () => {
     card.classList.toggle("active");
