@@ -67,10 +67,11 @@ color:inherit;
 .map-frame{
 background:#f1e7d8;
 border-radius:28px;
-padding:80px 60px;
+padding:100px 90px;
 margin-top:40px;
 position:relative;
 }
+
 
 .map-grid{
 position:relative;
