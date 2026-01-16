@@ -82,15 +82,25 @@ background:linear-gradient(180deg,rgba(0,0,0,0.04),rgba(0,0,0,0.02));
 
 .map-axis.vertical{
 position:absolute;
-left:24px;top:80px;bottom:80px;
-display:flex;flex-direction:column;justify-content:space-between;
+left:30px;
+top:90px;
+bottom:90px;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+font-size:0.9rem;
 opacity:0.6;
 }
 
 .map-axis.horizontal{
-display:flex;justify-content:space-between;
-margin-bottom:20px;opacity:0.6;
+display:flex;
+justify-content:space-between;
+margin-bottom:26px;
+font-size:0.9rem;
+opacity:0.6;
+padding:0 10px;
 }
+
 
 .map-point{
 position:absolute;
