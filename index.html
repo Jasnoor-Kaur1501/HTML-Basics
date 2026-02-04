@@ -80,23 +80,33 @@
   <a href="equipment.html" class="card">⚙ Equipment</a>
 </section>
 
-  <section class="brew-section reveal">
-  <h2>Why BrewNotes Exists</h2>
+ <section class="brew-section reveal">
+  <h2>Simulate a Brew</h2>
+  <p>Adjust the variables and see what happens.</p>
 
-  <p>
-    Most coffee education teaches outcomes.
-    BrewNotes teaches systems.
-  </p>
+  <label>Grind Size</label>
+  <input
+    type="range"
+    id="grind"
+    min="1"
+    max="3"
+    step="1"
+    value="2"
+  />
 
-  <p>
-    Not what button to press.
-    But what forces are being activated.
-  </p>
+  <label>Contact Time</label>
+  <input
+    type="range"
+    id="time"
+    min="1"
+    max="3"
+    step="1"
+    value="2"
+  />
 
-  <p>
-    BrewNotes exists to turn coffee from a habit into a literacy.
-  </p>
+  <p id="brew-result">Adjust variables to begin.</p>
 </section>
+
 
   <section class="brew-section reveal">
   <h2>What BrewNotes Is Becoming</h2>
