@@ -187,3 +187,10 @@ input[type="range"] {
   margin: 12px 0;
 }
 
+input[type="range"] {
+  width: 100%;
+  margin: 20px 0 40px;
+  cursor: pointer;
+}
+
+
