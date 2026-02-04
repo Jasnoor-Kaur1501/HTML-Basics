@@ -13,5 +13,12 @@ reveals.forEach(r => observer.observe(r));
 document.querySelectorAll(".science-card").forEach(card => {
   card.addEventListener("click", () => {
     card.classList.toggle("active");
+    // Interactive brew sections
+document.querySelectorAll(".brew-section").forEach(section => {
+  section.addEventListener("click", () => {
+    section.classList.toggle("active-section");
+  });
+});
+
   });
 });
