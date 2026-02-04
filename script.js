@@ -37,6 +37,25 @@ document.querySelectorAll(".map-point").forEach(point => {
     });
   });
 });
+    // Brew simulator logic
+const grind = document.getElementById("grind");
+const time = document.getElementById("time");
+const result = document.getElementById("brew-result");
+
+function updateBrew() {
+  if (!grind || !time) return;
+
+  if (grind.value == 1 && time.value == 1)
+    result.innerText = "Under-extracted. Sour and thin.";
+  else if (grind.value == 3 && time.value == 3)
+    result.innerText = "Over-extracted. Bitter and dry.";
+  else
+    result.innerText = "Balanced extraction. Sweet and clear.";
+}
+
+grind?.addEventListener("input", updateBrew);
+time?.addEventListener("input", updateBrew);
+
 
   });
 });
