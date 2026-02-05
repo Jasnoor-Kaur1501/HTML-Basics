@@ -1,82 +1,36 @@
-/* ----------------------------
-   Scroll reveal system
----------------------------- */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Science — BrewNotes</title>
+<link rel="stylesheet" href="style.css">
+</head>
 
-const reveals = document.querySelectorAll(".reveal");
+<body>
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("active");
-    }
-  });
-}, { threshold: 0.12 });
+<nav class="nav">
+<a href="index.html" class="logo">BrewNotes</a>
+<div class="links">
+<a href="index.html">Home</a>
+<a href="method.html">Methods</a>
+<a href="science.html" class="active">Science</a>
+<a href="equipment.html">Equipment</a>
+<a href="station.html">Station</a>
+</div>
+</nav>
 
-reveals.forEach(r => observer.observe(r));
+<section class="page reveal">
+<h1>Coffee Science</h1>
+</section>
 
+<div class="science-grid reveal">
+<div class="science-card">Bean</div>
+<div class="science-card">Grind</div>
+<div class="science-card">Water</div>
+<div class="science-card">Time</div>
+</div>
 
-/* ----------------------------
-   Science card interaction
----------------------------- */
-
-document.querySelectorAll(".science-card").forEach(card => {
-  card.addEventListener("click", () => {
-    card.classList.toggle("active");
-  });
-});
-
-
-/* ----------------------------
-   Interactive brew sections
----------------------------- */
-
-let visited = JSON.parse(localStorage.getItem("brewnotes-progress")) || 0;
-
-document.querySelectorAll(".brew-section").forEach(section => {
-  section.addEventListener("click", () => {
-    section.classList.toggle("active-section");
-    visited++;
-    localStorage.setItem("brewnotes-progress", visited);
-    updateProgress();
-  });
-});
-
-
-/* ----------------------------
-   Method map → content focus
----------------------------- */
-
-document.querySelectorAll(".map-point").forEach(point => {
-  point.addEventListener("click", () => {
-    const name = point.innerText.toLowerCase();
-
-    document.querySelectorAll(".brew-section").forEach(sec => {
-      sec.classList.remove("focused");
-    });
-
-    document.querySelectorAll(".brew-section h2").forEach(h2 => {
-      if (h2.innerText.toLowerCase().includes(name)) {
-        const section = h2.parentElement;
-        section.classList.add("focused");
-        section.scrollIntoView({
-          behavior: "smooth",
-          block: "center"
-        });
-      }
-    });
-  });
-});
-
-
-/* ----------------------------
-   Progress text
----------------------------- */
-
-function updateProgress() {
-  const progressText = document.getElementById("progress-text");
-  if (progressText) {
-    progressText.innerText = `You’ve explored ${visited} concepts so far.`;
-  }
-}
-
-updateProgress();
+<script src="script.js"></script>
+</body>
+</html>
