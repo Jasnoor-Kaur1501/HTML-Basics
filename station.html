@@ -1,38 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Brew Station — BrewNotes</title>
-  <link rel="stylesheet" href="station.css">
-  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Brew Station</title>
+<link rel="stylesheet" href="station.css">
 </head>
+
 <body>
 
 <div class="station">
+<h1>Coffee Station</h1>
 
-  <div class="background-glow"></div>
+<div class="cup" id="cup"></div>
 
-  <div class="counter">
-
-    <div class="tool kettle">Kettle</div>
-
-    <div class="cup-area">
-      <div class="steam"></div>
-      <div class="cup">
-        <div class="coffee"></div>
-      </div>
-    </div>
-
-    <div class="tool beans">Beans</div>
-
-  </div>
-
-  <p class="hint">A quiet place to make coffee.</p>
-
+<button onclick="pour()">Pour Coffee</button>
+<button onclick="steam()">Steam Milk</button>
 </div>
 
 <script src="station.js"></script>
 </body>
 </html>
-
