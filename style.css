@@ -1,203 +1,74 @@
-* {
+*{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:"Comic Neue","Comic Sans MS",system-ui,sans-serif;
+font-family:system-ui;
 }
 
-body {
-  background: #efe3d3; /* darker beige */
-  color: #4b2e1e;      /* chocolate brown */
-  line-height: 1.7;
+body{
+background:#efe3d3;
+color:#4b2e1e;
+line-height:1.7;
 }
 
-.nav {
+.nav{
 position:fixed;
 top:0;
 width:100%;
 padding:18px 40px;
 display:flex;
 justify-content:space-between;
-align-items:center;
-background:rgba(246,239,230,0.7);
-backdrop-filter:blur(12px);
-z-index:100;
+background:#efe3d3;
 }
 
-.logo { text-decoration:none; color:inherit; font-weight:700; }
-
-.links a {
+.links a{
 margin-left:20px;
 text-decoration:none;
-color:#2b1e16;
+color:#4b2e1e;
 opacity:0.6;
 }
 
-.links a.active,.links a:hover{opacity:1;}
+.links a.active{opacity:1;}
 
-.hero { padding:140px 12vw 80px; max-width:900px; margin:auto; }
+.hero{padding:140px 12vw 80px;}
+.page{padding:140px 12vw;}
 
-.editorial,.brew-section{ padding:60px 12vw; max-width:820px; margin:auto; }
+.brew-section{padding:60px 12vw;}
 
 .grid{
-padding:40px 12vw 100px;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:24px;
+gap:20px;
+padding:40px 12vw;
 }
 
 .card,.block{
-background:#efe4d5;
+background:#f2e6d8;
 padding:28px;
 border-radius:18px;
-box-shadow:0 20px 40px rgba(0,0,0,0.08);
 text-decoration:none;
 color:inherit;
 }
 
-.page{ padding:140px 12vw 100px; max-width:1000px; margin:auto; }
+.reveal{opacity:0;transform:translateY(30px);transition:0.8s;}
+.reveal.active{opacity:1;transform:translateY(0);}
 
-.stack{ display:grid; gap:28px; margin-top:40px; }
+.method-map{margin:120px auto;text-align:center;}
+.map-frame{background:#f1e7d8;padding:80px;border-radius:20px;}
 
-.reveal{ opacity:0; transform:translateY(30px); transition:1s ease; }
-.reveal.active{ opacity:1; transform:translateY(0); }
-
-.method-map{ margin:160px auto; text-align:center; max-width:900px; }
-
-.map-frame{
-background:#f1e7d8;
-border-radius:28px;
-padding:100px 90px;
-margin-top:40px;
-position:relative;
-}
-
-
-.map-grid{
-position:relative;
-height:360px;
-border-radius:18px;
-background:linear-gradient(180deg,rgba(0,0,0,0.04),rgba(0,0,0,0.02));
-}
-
-.map-axis.vertical{
-position:absolute;
-left:30px;
-top:90px;
-bottom:90px;
-display:flex;
-flex-direction:column;
-justify-content:space-between;
-font-size:0.9rem;
-opacity:0.6;
-}
-
-.map-axis.horizontal{
-display:flex;
-justify-content:space-between;
-margin-bottom:26px;
-font-size:0.9rem;
-opacity:0.6;
-padding:0 10px;
-}
-
+.map-grid{position:relative;height:300px;}
 
 .map-point{
 position:absolute;
-padding:12px 18px;
-background:#fff;
+background:white;
+padding:10px 16px;
 border-radius:999px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
-.pour{top:40px;left:80px;}
-.espresso{top:60px;right:90px;}
-.french{bottom:70px;left:90px;}
-.cold{bottom:40px;right:120px;}
-.aero{top:170px;left:46%;transform:translateX(-50%);}
+.pour{top:20px;left:40px;}
+.espresso{top:20px;right:40px;}
+.french{bottom:40px;left:40px;}
+.cold{bottom:40px;right:40px;}
+.aero{top:120px;left:45%;}
 
-.science-grid{
-margin-top:60px;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:28px;
-}
-
-.science-card{
-background:#efe3d3;
-padding:26px;
-border-radius:22px;
-box-shadow:0 20px 40px rgba(0,0,0,0.08);
-cursor:pointer;
-transition:0.3s;
-}
-
-.science-card.active{
-outline:2px solid rgba(90,60,30,0.4);
-background:#e6d6c2;
-}
-
-.active-section {
-  background: #efe0cd;
-  transition: background 0.4s ease;
-}
-
-.focused {
-  outline: 2px solid rgba(90,60,30,0.4);
-  border-radius: 18px;
-}
-
-.footer{
-margin-top:160px;
-padding:80px;
-text-align:center;
-opacity:0.5;
-}
-
-/* =========================
-   Interactive learning layer
-========================= */
-
-.brew-section {
-  cursor: pointer;
-  transition: all 0.4s ease;
-}
-
-.brew-section.active-section {
-  background: #efe3d3;
-  border-radius: 18px;
-  transform: scale(1.02);
-}
-
-.brew-section.focused {
-  outline: 2px solid rgba(90,60,30,0.4);
-  background: #e6d6c2;
-}
-
-#progress-text {
-  text-align: center;
-  margin: 120px auto 40px;
-  opacity: 0.7;
-  font-size: 0.95rem;
-}
-
-
-input[type="range"] {
-  width: 100%;
-  margin: 12px 0;
-}
-
-input[type="range"] {
-  width: 100%;
-  margin: 20px 0 40px;
-  cursor: pointer;
-}
-
-.card,
-.block,
-.map-frame,
-.science-card {
-  background: #f2e6d8;
-}
-
-
+.footer{text-align:center;padding:60px;opacity:0.6;}
