@@ -1,36 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Science — BrewNotes</title>
-<link rel="stylesheet" href="style.css">
-</head>
+/* reveal animation */
+const reveals = document.querySelectorAll(".reveal");
 
-<body>
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("active");
+}
+});
+},{threshold:0.12});
 
-<nav class="nav">
-<a href="index.html" class="logo">BrewNotes</a>
-<div class="links">
-<a href="index.html">Home</a>
-<a href="method.html">Methods</a>
-<a href="science.html" class="active">Science</a>
-<a href="equipment.html">Equipment</a>
-<a href="station.html">Station</a>
-</div>
-</nav>
+reveals.forEach(r=>observer.observe(r));
 
-<section class="page reveal">
-<h1>Coffee Science</h1>
-</section>
+/* science card toggle */
+document.querySelectorAll(".science-card").forEach(card=>{
+card.addEventListener("click",()=>{
+card.classList.toggle("active");
+});
+});
 
-<div class="science-grid reveal">
-<div class="science-card">Bean</div>
-<div class="science-card">Grind</div>
-<div class="science-card">Water</div>
-<div class="science-card">Time</div>
-</div>
+/* map scroll focus */
+document.querySelectorAll(".map-point").forEach(point=>{
+point.addEventListener("click",()=>{
+const name = point.innerText.toLowerCase();
 
-<script src="script.js"></script>
-</body>
-</html>
+document.querySelectorAll(".brew-section h2").forEach(h2=>{
+if(h2.innerText.toLowerCase().includes(name)){
+h2.parentElement.scrollIntoView({behavior:"smooth"});
+}
+});
+});
+});
+
+/* brew simulator */
+const grind=document.getElementById("grind");
+const time=document.getElementById("time");
+const result=document.getElementById("brew-result");
+
+function update(){
+if(!grind||!time||!result)return;
+
+if(grind.value==1 && time.value==1)
+result.innerText="Under extracted";
+else if(grind.value==3 && time.value==3)
+result.innerText="Over extracted";
+else
+result.innerText="Balanced";
+}
+
+grind?.addEventListener("input",update);
+time?.addEventListener("input",update);
