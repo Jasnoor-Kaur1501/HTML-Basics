@@ -1,23 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Brew Station</title>
-<link rel="stylesheet" href="station.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Station | BrewNotes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="station.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 </head>
-
 <body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">BrewNotes</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="method.html">Methods</a></li>
+                <li><a href="science.html">Science</a></li>
+                <li><a href="equipment.html">Equipment</a></li>
+                <li><a href="station.html" class="active">Station</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<div class="station">
-<h1>Coffee Station</h1>
+    <header class="page-header container">
+        <h1 class="reveal">Coffee Station</h1>
+        <p class="reveal">Practice your composition.</p>
+    </header>
 
-<div class="cup" id="cup"></div>
+    <section class="container station-container reveal">
+        <div class="station-inner">
+            <div class="cup-wrapper">
+                <div class="cup">
+                    <div class="cup-handle"></div>
+                    <div class="liquid-milk" id="milk-layer"></div>
+                    <div class="liquid-espresso" id="espresso-layer"></div>
+                </div>
+            </div>
 
-<button onclick="pour()">Pour Coffee</button>
-<button onclick="steam()">Steam Milk</button>
-</div>
+            <div class="station-ui">
+                <div class="status-box">
+                    <h3 id="brew-status">Ready for a brew?</h3>
+                    <p class="stats">Level: <span id="total-level">0</span>%</p>
+                </div>
 
-<script src="station.js"></script>
+                <div class="controls-grid">
+                    <button class="station-btn espresso-btn" id="btn-espresso">Espresso</button>
+                    <button class="station-btn milk-btn" id="btn-milk">Milk</button>
+                    <button class="station-btn steam-btn" id="btn-reset">Reset</button>
+                </div>
+                <p class="tip">Hold buttons to pour!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container stats-row reveal">
+        <div class="stat-card">
+            <span>🌡️</span>
+            <h4>Temp</h4>
+            <p>94°C</p>
+        </div>
+        <div class="stat-card">
+            <span>⚖️</span>
+            <h4>Weight</h4>
+            <p><span id="gram-weight">0</span>g</p>
+        </div>
+        <div class="stat-card">
+            <span>⏱️</span>
+            <h4>Time</h4>
+            <p>28s</p>
+        </div>
+        <div class="stat-card">
+            <span>✨</span>
+            <h4>Crema</h4>
+            <p>Perfect</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <h2>BrewNotes</h2>
+        <p>&copy; 2024 BrewNotes Collective. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="station.js"></script>
 </body>
 </html>
