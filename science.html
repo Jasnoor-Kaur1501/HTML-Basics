@@ -1,155 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Coffee Science — BrewNotes</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science | BrewNotes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 </head>
-
 <body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">BrewNotes</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="method.html">Methods</a></li>
+                <li><a href="science.html" class="active">Science</a></li>
+                <li><a href="equipment.html">Equipment</a></li>
+                <li><a href="station.html">Station</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<nav class="nav">
-<a href="index.html" class="logo">BrewNotes</a>
-<div class="links">
-<a href="index.html">Home</a>
-<a href="method.html">Methods</a>
-<a href="science.html" class="active">Science</a>
-<a href="equipment.html">Equipment</a>
-</div>
-</nav>
+    <header class="page-header container">
+        <h1 class="reveal">The Science</h1>
+        <p class="reveal">Understanding what happens inside the filter.</p>
+    </header>
 
-<section class="page reveal">
-<h1>Coffee Science</h1>
-<p>Coffee is applied chemistry pretending to be a drink.</p>
+    <section class="container accordion-container">
+        <div class="accordion-item reveal">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <div>
+                    <span class="sub-label">THE 3 STAGES</span>
+                    <h3>Extraction Basics</h3>
+                </div>
+                <div class="arrow">&#9662;</div>
+            </div>
+            <div class="accordion-content">
+                <p>Coffee extraction happens in three distinct phases: first come the acids and fats, followed by the sugars and sweetness, and finally the plant fibers and bitter compounds. The goal is to stop brewing before too many bitter notes dissolve.</p>
+            </div>
+        </div>
 
-<div class="science-grid">
-<div class="science-card"><h3>🫘 Bean</h3><p>Species, origin, processing, roast.</p></div>
-<div class="science-card"><h3>⚙ Grind</h3><p>Particle size and distribution.</p></div>
-<div class="science-card"><h3>💧 Water</h3><p>Temperature and minerals.</p></div>
-<div class="science-card"><h3>⏱ Time</h3><p>Contact length and flow.</p></div>
-</div>
-</section>
+        <div class="accordion-item reveal">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <div>
+                    <span class="sub-label">92°C - 96°C</span>
+                    <h3>Temperature Dynamics</h3>
+                </div>
+                <div class="arrow">&#9662;</div>
+            </div>
+            <div class="accordion-content">
+                <p>Water temperature is the fuel for chemical reactions. Too hot, and you scorch the grounds. Too cool, and you'll fail to dissolve the complex sugars, resulting in a sour, thin cup.</p>
+            </div>
+        </div>
 
-  <section class="brew-section">
-  <h2>Extraction Is Not Strength</h2>
+        <div class="accordion-item reveal">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <div>
+                    <span class="sub-label">TOTAL DISSOLVED SOLIDS</span>
+                    <h3>TDS & Yield</h3>
+                </div>
+                <div class="arrow">&#9662;</div>
+            </div>
+            <div class="accordion-content">
+                <p>TDS measures the strength of your brew. Ideally, manual brews aim for 1.15% to 1.35% TDS. Extraction yield (what we pulled out of the bean) should sit between 18-22%.</p>
+            </div>
+        </div>
 
-  <p>
-    Strong coffee is not highly extracted coffee.
-    It is highly concentrated coffee.
-  </p>
+        <div class="accordion-item reveal">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <div>
+                    <span class="sub-label">SURFACE AREA</span>
+                    <h3>Grind Uniformity</h3>
+                </div>
+                <div class="arrow">&#9662;</div>
+            </div>
+            <div class="accordion-content">
+                <p>Uneven grinds lead to uneven extraction. Fine dust over-extracts (bitter), while large boulders under-extract (sour). A high-quality burr grinder is essential for a clean profile.</p>
+            </div>
+        </div>
+    </section>
 
-  <p>
-    Extraction measures how much material leaves the bean.
-    Strength measures how much material is in the cup.
-  </p>
+    <section class="container reveal">
+        <div class="info-block-dark">
+            <h3>The Golden Ratio</h3>
+            <p>For most drip methods, we recommend starting with 60g of coffee per 1 liter of water (1:16.6). From there, adjust based on your personal taste preference.</p>
+            <a href="method.html" class="accent-link">Adjust your ratio in Methods &rarr;</a>
+        </div>
+    </section>
 
-  <p>
-    You can have strong under-extracted coffee.
-    You can have weak over-extracted coffee.
-  </p>
+    <footer class="footer">
+        <h2>BrewNotes</h2>
+        <p>&copy; 2024 BrewNotes Collective. All rights reserved.</p>
+    </footer>
 
-  <p>
-    Confusing these is why most coffee tastes bad.
-  </p>
-</section>
-
-  <section class="brew-section reveal">
-  <h2>Flavor Does Not Exist in Coffee</h2>
-
-  <p>
-    Coffee does not contain “chocolate” or “berries.”
-  </p>
-
-  <p>
-    It contains acids, alcohols, phenols, and aromatics.
-    Your brain turns them into memories.
-  </p>
-
-  <p>
-    Taste is not detection.
-    It is interpretation.
-  </p>
-</section>
-
-  <section class="brew-section reveal">
-  <h2>The Sensory Stack</h2>
-
-  <p>
-    Coffee flavor is built in layers.
-  </p>
-
-  <p>
-    Aroma comes first.
-    Then acidity.
-    Then sweetness.
-    Then body.
-    Then finish.
-  </p>
-
-  <p>
-    What you call “taste” is actually sequence.
-  </p>
-</section>
-
-  <section class="brew-section reveal">
-  <h2>Tasting Is a Skill</h2>
-
-  <p>
-    Most people do not taste coffee.
-    They react to it.
-  </p>
-
-  <p>
-    Tasting means separating sour from acidic.
-    Bitter from strong.
-    Light from weak.
-  </p>
-
-  <p>
-    BrewNotes treats tasting as literacy.
-  </p>
-</section>
-
-<section class="brew-section">
-  <h2>The Control Variables</h2>
-
-  <p>
-    Every brew method manipulates the same small set of forces.
-  </p>
-
-  <p>
-    Grind size controls surface area.  
-    Water controls solubility.  
-    Time controls sequencing.  
-    Agitation controls speed.  
-    Ratio controls concentration.
-  </p>
-
-  <p>
-    Recipes are just fixed positions inside this system.
-  </p>
-</section>
-
-  <section class="brew-section reveal">
-  <h2>The Three Stages of Extraction</h2>
-
-  <p>
-    Coffee does not extract evenly.
-  </p>
-
-  <p>
-    First come acids and volatile aromatics.
-    Then sugars and oils.
-    Then bitter structural compounds.
-  </p>
-
-  <p>
-    Great coffee is not strength.
-    It is timing.
-  </p>
-</section>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
