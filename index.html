@@ -1,46 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>BrewNotes</title>
-<link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrewNotes | Your Personal Coffee Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/"
+  }
+}
+</script>
 </head>
-
 <body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">BrewNotes</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="method.html">Methods</a></li>
+                <li><a href="science.html">Science</a></li>
+                <li><a href="equipment.html">Equipment</a></li>
+                <li><a href="station.html">Station</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<nav class="nav">
-<a href="index.html" class="logo">BrewNotes</a>
-<div class="links">
-<a href="index.html" class="active">Home</a>
-<a href="method.html">Methods</a>
-<a href="science.html">Science</a>
-<a href="equipment.html">Equipment</a>
-<a href="station.html">Station</a>
-</div>
-</nav>
+    <header class="hero">
+        <div class="hero-content reveal">
+            <h1>The Art of the <span class="italic-accent">Perfect Pour</span></h1>
+            <p>A meticulously curated guide to manual coffee brewing, from bean science to equipment mastery.</p>
+            <a href="method.html" class="btn">Explore Methods</a>
+        </div>
+    </header>
 
-<section class="hero reveal">
-<h1>Learn coffee like a system.</h1>
-<p>BrewNotes is a visual coffee knowledge map. Not recipes. Systems.</p>
-</section>
+    <section class="container grid-links">
+        <a href="method.html" class="card link-card reveal">
+            <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1544787210-22839447495e?auto=format&fit=crop&w=800&q=80')"></div>
+            <div class="card-content">
+                <h3>Brewing Methods</h3>
+                <p>V60, Chemex, Aeropress and more.</p>
+            </div>
+        </a>
+        <a href="science.html" class="card link-card reveal">
+            <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=800&q=80')"></div>
+            <div class="card-content">
+                <h3>The Science</h3>
+                <p>Extraction, TDS, and temperature curves.</p>
+            </div>
+        </a>
+        <a href="station.html" class="card link-card reveal">
+            <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1507133750040-4a8f57021571?auto=format&fit=crop&w=800&q=80')"></div>
+            <div class="card-content">
+                <h3>Coffee Station</h3>
+                <p>Interactive brewing simulator.</p>
+            </div>
+        </a>
+    </section>
 
-<section class="brew-section reveal">
-<h2>The Coffee Stack</h2>
-<p>Biology → Roast → Grind → Brew → Taste</p>
-</section>
+    <section class="container intro-text">
+        <h2 class="reveal">Why Brew Manual?</h2>
+        <p class="reveal">Manual brewing isn't just about the caffeine; it's about the connection. It's the ritual of weighing beans, the scent of the first bloom, and the control over every variable that transforms a simple beverage into a crafted masterpiece.</p>
+    </section>
 
-<section class="grid reveal">
-<a href="method.html" class="card">☕ Methods</a>
-<a href="science.html" class="card">🧪 Science</a>
-<a href="equipment.html" class="card">⚙ Equipment</a>
-<a href="station.html" class="card">🎮 Brew Station</a>
-</section>
+    <footer class="footer">
+        <h2>BrewNotes</h2>
+        <p>Crafting the perfect cup, one note at a time.</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="method.html">Methods</a>
+            <a href="science.html">Science</a>
+        </div>
+        <p class="copyright">&copy; 2024 BrewNotes Collective. All rights reserved.</p>
+    </footer>
 
-<footer class="footer">
-<p>BrewNotes is a living coffee system.</p>
-</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
